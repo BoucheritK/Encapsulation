@@ -2,10 +2,10 @@ const assert = require("assert");
 
 class BankCustomer {
   constructor(name, pinInput) {
-    let customersName = "John Doe";
-    let privatePin = "3579";
-    this.getName = () => name;
-    this.verifyPinInput = pinInput => {
+    let customersName = name;
+    let privatePin = pinInput;
+    this.getName = () => customersName;
+    this.verifyPinInput = privatePin => {
       if (pinInput == privatePin) {
         return true;
       } else {
